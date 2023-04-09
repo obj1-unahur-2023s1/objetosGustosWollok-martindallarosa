@@ -1,0 +1,141 @@
+object rojo {
+method esFuerte(){
+return true
+}
+}
+
+object verde {
+method esFuerte(){
+return true
+}
+}
+
+object celeste {
+method esFuerte(){
+return false
+}
+}
+
+object pardo {
+method esFuerte(){
+return false
+}
+}
+
+object cobre {
+method esBrillante() = true
+}
+
+object vidrio {
+method esBrillante() = true
+}
+
+object lino {
+method esBrillante() = true
+}
+
+object madera {
+method esBrillante() = true
+}
+
+object cuero {
+method esBrillante() = true
+}
+
+object remera {
+     	method peso() = 800
+	method material() = lino
+	method color() = rojo
+}
+
+object pelota {
+     	method peso() = 1300
+	method material() = cuero
+	method color() = pardo
+}
+
+object biblioteca {
+     	method peso() = 8000
+	method material() = madera
+	method color() = verde
+}
+
+object munieco {
+     	var peso
+	method peso() = peso
+	method peso(unValor){
+	       peso = unValor	
+	}
+	method material() = vidrio
+	method color() = celeste
+}
+
+
+object placaDeCobre {
+	var color  
+	var peso     	
+	
+	method color()= color
+	method color(unColor){
+	color = unColor
+	}
+	method peso()= peso
+	method peso(unpeso){
+	peso = unpeso
+	}
+	method material() = cobre
+	
+}
+
+
+object rosa{
+	method leGusta(unObjeto){
+	return unObjeto.peso() <= 2000	
+	}
+}
+
+object estefania{
+	method leGusta(unObjeto){
+	return unObjeto.color().esFuerte()
+	}
+}
+
+
+object juan{
+	method leGusta(unObjeto){
+	return not unObjeto.color().esFuerte() or unObjeto.peso().between(1200,1800)
+	}
+}
+
+object bolichito {
+	var vidriera
+	var mostrador
+
+	method vidriera() = vidriera
+	method vidriera(unObjeto){ vidriera = unObjeto} 
+
+	method mostrador() = mostrador
+	method mostrador(unObjeto){ mostrador = unObjeto}
+
+	method esBrillante(){
+	return vidriera.material().esBrillante() and mostrador.material().esBrillante()
+}
+	method puedeOfrecerleAlgoA(unaPersona){
+	return unaPersona.leGusta(vidriera) or unaPersona.leGusta(mostrador)
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
